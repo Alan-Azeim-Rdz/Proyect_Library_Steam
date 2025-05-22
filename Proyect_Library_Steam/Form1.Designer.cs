@@ -28,18 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
+            BtnSearchGame = new Button();
+            BtnShowGeneralGames = new Button();
             SuspendLayout();
+            // 
+            // BtnSearchGame
+            // 
+            BtnSearchGame.Location = new Point(152, 381);
+            BtnSearchGame.Name = "BtnSearchGame";
+            BtnSearchGame.Size = new Size(223, 111);
+            BtnSearchGame.TabIndex = 0;
+            BtnSearchGame.Text = "Buscar juego";
+            BtnSearchGame.UseVisualStyleBackColor = true;
+            BtnSearchGame.Click += BtnSearchGame_Click;
+            // 
+            // BtnShowGeneralGames
+            // 
+            BtnShowGeneralGames.Location = new Point(651, 381);
+            BtnShowGeneralGames.Name = "BtnShowGeneralGames";
+            BtnShowGeneralGames.Size = new Size(223, 111);
+            BtnShowGeneralGames.TabIndex = 3;
+            BtnShowGeneralGames.Text = "Biblioteca general";
+            BtnShowGeneralGames.UseVisualStyleBackColor = true;
+            BtnShowGeneralGames.Click += BtnShowGeneralGames_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1277, 637);
+            BackgroundImage = Properties.Resources.fondo_from_1_;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1017, 637);
+            Controls.Add(BtnShowGeneralGames);
+            Controls.Add(BtnSearchGame);
+            DoubleBuffered = true;
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button BtnSearchGame;
+        private Button BtnShowGeneralGames;
     }
 }
